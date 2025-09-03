@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sederhana</title>
+    <style>
+        :root {
+            --bg-color-start: #f0f0f0;
+            --bg-color-end: #ffffff;
+            --primary-color: #2c3e50;
+            --secondary-color: #ecf0f1;
+            --text-color: #34495e;
+            --accent-color: #8e44ad;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--bg-color-start), var(--bg-color-end));
+            color: var(--text-color);
+            transition: background 0.5s ease;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            color: var(--primary-color);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid var(--secondary-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 15px 0;
+            border-top: 2px solid var(--secondary-color);
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            margin: 8px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #9b59b6;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Kontak Card */
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 12px 0;
+            font-size: 1.1rem;
+        }
+
+        ul li a {
+            color: #8e44ad;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Sederhana</h1>
+    </header>
+    <nav>
+        <a onclick="showPage('home')">Home</a>
+        <a href="https://jundan01.github.io/TugasWebsiteSederhana/biodata.html">Tentang</a>
+        <a onclick="showPage('kontak')">Kontak</a>
+    </nav>
+    <main id="content">
+        <!-- Default Home Page -->
+        <h2>Selamat Datang di Portal Kami!</h2>
+        <p>Ini adalah contoh website futuristik dengan desain dominan putih dan bersih.</p>
+        <button onclick="showAlert()">Akses Sistem</button>
+        <button onclick="changeBackgroundColor('#222')">Ubah Latar Belakang</button>
+    </main>
+    <footer>
+        <p>&copy; 2025 Website Futuristik. Hak Cipta Dilindungi.</p>
+    </footer>
+    <script>
+        function showAlert() {
+            alert("Halo, selamat datang!");
+        }
+
+        function changeBackgroundColor(color) {
+            document.body.style.background = color;
+        }
+
+        function showPage(page) {
+            let content = document.getElementById("content");
+            if (page === "home") {
+                document.body.style.background = "linear-gradient(135deg, var(--bg-color-start), var(--bg-color-end))";
+                content.innerHTML = `
+                    <h2>Selamat Datang di Portal Kami!</h2>
+                    <p>Ini adalah contoh website futuristik dengan desain dominan putih dan bersih.</p>
+                    <button onclick="showAlert()">Akses Sistem</button>
+                    <button onclick="changeBackgroundColor('#222')">Ubah Latar Belakang</button>
+                 `;
+            } else if (page === "kontak") {
+                document.body.style.background = "linear-gradient(135deg, var(--bg-color-start), var(--bg-color-end))";
+                content.innerHTML = `
+                    <div class="card">
+                        <h2>Sosial Media</h2>
+                        <ul>
+                            <li>📧 Email: <a href="mailto:ajriajundan@gmail.com">ajriajundan@gmail.com</a></li>
+                            <li>📱 WhatsApp: <a href="https://wa.me/6283174192722" target="_blank">+62 831-7419-2722</a></li>
+                            <li>📸 Instagram: <a href="https://instagram.com/username" target="_blank">@username</a></li>
+                            <li>💼 LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></li>
+                            <li>🌐 Website: <a href="https://drive.google.com/drive/folders/1doxirzrCBQIqAHAYLRmfgmKIJyuk2ZgP?usp=sharing" target="_blank">GoogleDrive-ajriajundan</a></li>
+                        </ul>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
