@@ -1,0 +1,265 @@
+/* GLOBAL STYLES */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #007bff; /* Biru terang untuk judul */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* HEADER/NAVIGASI */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #007bff 3px solid;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #007bff;
+}
+
+/* HERO SECTION */
+#hero {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    color: #fff;
+    font-size: 3em;
+    margin-top: 0;
+    border-bottom: none;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #007bff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background: #f0f0f0;
+    color: #0056b3;
+}
+
+/* ABOUT SECTION */
+.about {
+    background: #fff;
+}
+
+.award-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: #e9ecef;
+    border-left: 5px solid #007bff;
+}
+
+.award-section h3 {
+    color: #333;
+}
+
+.award-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.award-section li {
+    margin-bottom: 10px;
+}
+
+.award-section li i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* SKILLS SECTION */
+.skills {
+    background: #e4e6eb;
+}
+
+.skills h3 {
+    margin-top: 30px;
+    color: #0056b3;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-item {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+.skill-item i {
+    color: #007bff;
+    margin-right: 5px;
+}
+
+.other-skills .skill-item {
+    background: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+}
+
+/* PROJECTS SECTION */
+.projects {
+    background: #fff;
+}
+
+.project-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.project-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.project-meta {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+}
+
+.highlight-tech {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.project-item ul {
+    margin-left: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT SECTION */
+.contact {
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #fff;
+    border-color: #007bff;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
