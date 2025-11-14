@@ -1,0 +1,114 @@
+/*
+    File: style.css
+    Tema: Interaktif, Modern, Oranye-Hitam-Putih
+*/
+
+/* 1. Base Styling & Transisi Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Latar belakang putih lembut */
+    color: #1E1E1E; /* Teks hampir hitam */
+}
+
+/* Mengatur transisi halus untuk semua elemen interaktif */
+a, button, .card, .nav-link, .btn, .project-card, .border.rounded.shadow-sm {
+    transition: all 0.3s ease-in-out; 
+}
+
+/* 2. Navbar & Footer (Hitam Pekat) */
+.navbar {
+    background-color: #101010 !important; /* Warna Hitam Pekat */
+    border-bottom: 3px solid #FF6600; /* Garis bawah Oranye sebagai aksen */
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #FFFFFF !important;
+}
+
+/* Interaktif: Hover pada Navigasi */
+.nav-link:hover {
+    color: #FF6600 !important; /* Berubah menjadi warna aksen Oranye */
+    transform: translateY(-2px); 
+}
+
+.nav-link.active {
+    color: #FF6600 !important;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #101010;
+    color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+/* 3. Hero Section (Home) */
+.hero {
+    height: 90vh; 
+    /* Kombinasi warna gelap dan oranye untuk latar belakang */
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(255, 102, 0, 0.7)), url('placeholder-background.jpg') no-repeat center center;
+    background-size: cover; 
+    color: white; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid #FF6600; /* Border menonjol dengan warna Oranye */
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.7); /* Glowing effect Oranye */
+}
+
+/* 4. Interaktif: Tombol (Aksen Oranye) */
+.btn-primary {
+    background-color: #FF6600;
+    border-color: #FF6600;
+    color: white;
+    box-shadow: 0 4px 6px rgba(255, 102, 0, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #E65C00; /* Oranye sedikit lebih gelap */
+    border-color: #E65C00;
+    transform: scale(1.05); 
+    box-shadow: 0 8px 15px rgba(255, 102, 0, 0.5); /* Bayangan yang lebih kuat */
+}
+
+/* 5. Interaktif: Card/Panel */
+.project-card, .border.rounded.shadow-sm { 
+    background-color: white;
+    border: 1px solid #e0e0e0 !important; /* Border abu-abu tipis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover, .border.rounded.shadow-sm:hover {
+    transform: translateY(-8px); /* Efek melayang yang dramatis */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+    border-color: #FF6600 !important; /* Border berubah menjadi Oranye */
+}
+
+/* Kustomisasi elemen lainnya */
+.text-primary {
+    color: #FF6600 !important;
+}
+
+.badge {
+    padding: 0.6em 1em;
+    font-size: 0.85em;
+    border-radius: 50rem;
+    font-weight: 500;
+}
+
+.form-control:focus {
+    border-color: #FF6600;
+    box-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
+}
+
+/* Mengubah warna badge sekunder agar tidak terlalu kontras */
+.badge.bg-secondary {
+    background-color: #343a40 !important; /* Hitam abu-abu */
+    color: white;
+}
