@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Surat dari Bumi</title>
+
+    <style>
+      /* Mengimpor font */
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;600&display=swap");
+
+      /* --- PALET WARNA --- */
+      :root {
+        --bg-color: #f5f1e8;
+        --envelope-main: #3e4e38; /* Warna Utama */
+        --envelope-flap: #475941; /* Tutup Atas */
+        --envelope-pocket: #50634a; /* Kantong Bawah */
+        --wood-accent: #795548;
+        --wood-dark: #4e342e;
+        --paper-color: #ffffff;
+        --sky-hint: #e8f4f8;
+        --text-color: #3e3e3e;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--bg-color);
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        font-family: "Quicksand", sans-serif;
+        overflow: hidden;
+      }
+
+      .main-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.8s ease;
+        z-index: 10;
+      }
+
+      .main-container.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /* --- STYLES AMPLOP --- */
+      .envelope-wrapper {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        margin-bottom: 50px;
+      }
+
+      .envelope {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--envelope-main);
+        border-radius: 10px;
+        box-shadow: 0 25px 45px rgba(62, 78, 56, 0.3);
+      }
+
+      /* 1. TUTUP ATAS (Flap) */
+      .envelope::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        z-index: 20;
+        border-top: 110px solid var(--envelope-flap);
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        transform-origin: top;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
+          z-index 0.2s;
+        border-radius: 5px;
+      }
+
+      /* 2. KANTONG BAWAH (Pocket) */
+      .envelope::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        z-index: 10; /* Kantong ada di layer 10 */
+        border-bottom: 120px solid var(--envelope-pocket);
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        border-radius: 0 0 10px 10px;
+      }
+
+      /* ANIMASI BUKA TUTUP */
+      .opened .envelope::before {
+        transform: rotateX(180deg);
+        z-index: 1;
+      }
+
+      /* --- KARTU INTRO (SURAT KECIL) --- */
+      .intro-card {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        height: auto; /* Height auto agar menyesuaikan isi */
+        min-height: 160px;
+        background: #fff;
+        padding: 20px 15px;
+        box-sizing: border-box;
+
+        /* POSISI AWAL: Di belakang kantong (Layer 5 < Layer 10) */
+        z-index: 5;
+
+        /* Transisi z-index dikasih delay agar tidak tembus saat baru gerak */
+        transition: bottom 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s,
+          z-index 0.1s linear 0.8s;
+
+        border-radius: 8px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      /* --- PERBAIKAN UTAMA DI SINI --- */
+      .opened .intro-card {
+        /* Naikkan lebih tinggi */
+        bottom: 130px;
+
+        /* Ubah Z-Index jadi LEBIH BESAR dari kantong (15 > 10) */
+        /* Ini membuat kartu tampil DI DEPAN kantong hijau saat sudah naik */
+        z-index: 15;
+      }
+
+      .intro-content {
+        width: 100%;
+      }
+
+      .intro-content h3 {
+        font-family: "Dancing Script", cursive;
+        color: var(--envelope-main);
+        margin: 0 0 10px 0;
+        font-size: 1.6rem;
+      }
+
+      #typedIntroText {
+        font-size: 0.9rem;
+        color: var(--wood-dark);
+        font-family: "Playfair Display", serif;
+        margin-bottom: 15px;
+        min-height: 45px; /* Menjaga tinggi agar tidak goyang saat ngetik */
+      }
+
+      /* --- BUTTONS --- */
+      .btn-style {
+        padding: 10px 30px;
+        border: none;
+        /* Warna tombol disamakan dengan amplop agar kontras dengan kertas putih */
+        background: var(--envelope-main);
+        color: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        -webkit-tap-highlight-color: transparent;
+        display: inline-block; /* Pastikan tombol punya dimensi */
+      }
+
+      .btn-style:active {
+        transform: scale(0.95);
+      }
+
+      #navBtn {
+        display: none;
+        margin-top: 5px;
+      }
+
+      #openBtn {
+        z-index: 30;
+        margin-top: 30px;
+        background: var(--wood-accent); /* Tombol luar beda warna */
+      }
+
+      /* --- SURAT LENGKAP (FULL LETTER) --- */
+      .full-letter-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        width: 85%;
+        max-width: 500px;
+        max-height: 80vh;
+        overflow-y: auto;
+        background: linear-gradient(to bottom right, #ffffff, var(--sky-hint));
+        padding: 30px 25px;
+        border-radius: 15px;
+        border: 1px solid rgba(121, 85, 72, 0.2);
+        box-shadow: 0 25px 50px rgba(62, 78, 56, 0.2);
+        z-index: 100; /* Paling atas */
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.6s ease;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .full-letter-container.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .full-letter-content {
+        font-family: "Playfair Display", serif;
+        line-height: 1.8;
+        color: var(--text-color);
+        font-size: 1rem;
+        text-align: justify;
+      }
+
+      .full-letter-content p {
+        margin-bottom: 15px;
+      }
+
+      .quote-start {
+        font-family: "Dancing Script", cursive;
+        font-size: 1.8rem;
+        color: var(--wood-accent);
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .letter-meta {
+        font-family: "Quicksand", sans-serif;
+        font-size: 0.75rem;
+        color: var(--wood-accent);
+        text-align: right;
+        margin-bottom: 15px;
+        opacity: 0.8;
+      }
+
+      /* --- RESPONSIVE MOBILE --- */
+      @media screen and (max-width: 400px) {
+        .envelope-wrapper {
+          transform: scale(0.9);
+        }
+        /* Penyesuaian agar di HP tetap tinggi */
+        .opened .intro-card {
+          bottom: 125px;
+        }
+        .full-letter-container {
+          width: 88%;
+          padding: 25px 20px;
+        }
+      }
+
+      /* Animasi Hati */
+      .heart {
+        position: absolute;
+        top: -10vh;
+        font-size: 20px;
+        animation: fall linear forwards;
+        z-index: 0;
+      }
+      @keyframes fall {
+        to {
+          transform: translateY(110vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="backsound" loop>
+      <source src="musik.mp3" type="audio/mp3"/>
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <div class="main-container" id="mainContainer">
+      <div class="envelope-wrapper" id="envelopeWrapper">
+        <div class="envelope">
+          <div class="intro-card">
+            <div class="intro-content">
+              <h3>Selamat Merayakan Hadirmu</h3>
+              <div id="typedIntroText"></div>
+              <button id="navBtn" class="btn-style">Baca Cerita Kita</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="openBtn" class="btn-style">Buka Pesan</button>
+    </div>
+
+    <div class="full-letter-container" id="fullLetter">
+      <div class="letter-meta">
+        Dari Kelabu Pada Arunika.<br />
+        <i>06 Januari 2026</i>
+      </div>
+
+      <div class="full-letter-content">
+        <span class="quote-start">Hai, Jiwa yang Berani...</span>
+
+        <p>
+          Aku hanyalah kelabu yang tak berwujud—sebuah ketiadaan yang ragu
+          antara harus menjadi hujan atau sekadar kabut. Bagiku, kelabu ini
+          adalah dingin yang mencekam, badai yang siap meruahkan bencana pada
+          daratan yang kering.
+        </p>
+
+        <p>
+          Namun kemudian. Sebuah jiwa yang begitu berani, yang tanpa ragu
+          menembus kusamnya duniaku. Di saat aku merasa kelam.
+        </p>
+        <p>
+          Dirimu, Sang Arunika, datang dengan sinar yang hangat. Engkau tak
+          gentar menatap kelabuku yang beku, yang penuh ketakutan.
+        </p>
+        <p>
+          Engkau justru berbisik bahwa kelabu ini hangat. Engkau dengan jemari
+          sabarmu mulai menata rapi setiap semu yang tersisa, perlahan
+          menyirnakan ketakutan yang mengepungku.
+        </p>
+
+        <p>
+          Engkau adalah pelukis yang mengubah anggapan kelabuku menjadi
+          bentangan langit biru yang menawan. Terima kasih telah menjadi jiwa
+          yang berani meraih ketakutanku, yang tidak membiarkanku tenggelam
+          dalam abu-abu.
+        </p>
+
+        <p>
+          Di hari lahirmu, kusematkan doa terbaik untuk segala hal baiknya.
+          Semoga semesta selalu memelukmu sehangat engkau memeluk jiwaku. Terima
+          kasih telah menjadi cahaya yang mengubah kelabuku menjadi pagi yang
+          menawan. Terima kasih telah ada.
+        </p>
+
+        <div
+          style="
+            text-align: right;
+            margin-top: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.4rem;
+            color: var(--wood-accent);
+          "
+        >
+          Salam Hangat.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const openBtn = document.getElementById("openBtn");
+      const navBtn = document.getElementById("navBtn");
+      const mainContainer = document.getElementById("mainContainer");
+      const envelopeWrapper = document.getElementById("envelopeWrapper");
+      const fullLetterContainer = document.getElementById("fullLetter");
+      const introTextTarget = document.getElementById("typedIntroText");
+      const audio = document.getElementById('backsound');
+
+      const introMessage =
+        "Ada sebuah kisah, tentang warna yang akhirnya menemukan namanya...";
+
+      function typeWriter(text, i, callback) {
+        if (i < text.length) {
+          introTextTarget.innerHTML += text.charAt(i);
+          setTimeout(() => typeWriter(text, i + 1, callback), 50);
+        } else if (callback) {
+          setTimeout(callback, 500);
+        }
+      }
+
+      function createElements() {
+        const el = document.createElement("div");
+        el.classList.add("heart");
+        const colors = ["#8D6E63", "#556B2F", "#A1887F", "#BC8F8F", "#6B8E23"];
+        el.innerHTML = Math.random() > 0.5 ? "❤" : "🍂";
+        el.style.color = colors[Math.floor(Math.random() * colors.length)];
+        el.style.left = Math.random() * 90 + 5 + "vw";
+        el.style.animationDuration = Math.random() * 3 + 4 + "s";
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 7000);
+      }
+
+      openBtn.addEventListener("click", () => {
+        envelopeWrapper.classList.add("opened");
+        openBtn.style.display = "none";
+
+        audio.volume = 0.5; 
+        audio.play().catch(error => {
+            console.log("Autoplay dicegah browser, perlu interaksi lebih: ", error);
+        });
+
+        // Delay ngetik sedikit biar suratnya naik dulu
+        setTimeout(() => {
+          typeWriter(introMessage, 0, () => {
+            navBtn.style.display = "inline-block";
+          });
+        }, 800);
+      });
+
+      navBtn.addEventListener("click", () => {
+        mainContainer.classList.add("hidden");
+        setTimeout(() => {
+          fullLetterContainer.classList.add("show");
+          setInterval(createElements, 800);
+        }, 600);
+      });
+    </script>
+  </body>
+</html>
