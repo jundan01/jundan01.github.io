@@ -1,1 +1,604 @@
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajria Jundan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Prism.js CSS (Okaidia theme for dark mode) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Portofolio<span class="text-orange">.Jundan</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Profil & Keahlian</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#karya">Pengalaman Kerja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="beranda" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-text">
+                    <h1 class="display-4 fw-bold mb-3">Membangun Solusi Digital Melalui <br><span class="text-orange">Teknologi Terkini</span></h1>
+                    <p class="lead mb-4 text-muted">Mahasiswa aktif D3 Manajemen Informatika di STMIK IKMI Cirebon. Bersemangat, disiplin, komunikatif, dan memiliki dasar pemrograman kuat untuk berkontribusi dalam tim sebagai <strong>Junior Programmer</strong>.</p>
+                    <a href="#karya" class="btn btn-orange btn-lg rounded-pill shadow-sm">Lihat Pengalaman & Proyek <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 d-none d-lg-block text-center">
+                    <img src="assets/images/pp.jpeg" alt="Foto Profil Ajria Jundan" class="img-fluid rounded-circle shadow-lg" style="max-width: 350px; border: 8px solid white;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="tentang" class="about-section py-5 bg-light">
+        <div class="container py-5">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold mb-3">Profil & <span class="text-orange">Kompetensi Utama</span></h2>
+                    <p class="text-muted">Memiliki kombinasi yang seimbang antara kemampuan teknis (hard skills) dalam pemrograman web dan keterampilan interpersonal (soft skills) untuk pengajaran dan layanan.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card about-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-dark text-white mb-3 mx-auto">
+                                <i class="fa-solid fa-code fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold">Pengembangan Web & IT</h5>
+                            <p class="text-muted small">Memiliki dasar pemrograman yang kuat (HTML, CSS, JavaScript, PHP, Laravel) serta mahir menggunakan Microsoft Office (Word, Excel) untuk administrasi harian.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card about-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-orange-light text-orange mb-3 mx-auto">
+                                <i class="fa-solid fa-users-gear fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold">Kepemimpinan</h5>
+                            <p class="text-muted small">Terbiasa memimpin tim dan menyelesaikan masalah (*problem solving*) dengan efektif di bawah tekanan tenggat waktu kerja.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card about-card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-dark text-white mb-3 mx-auto">
+                                <i class="fa-solid fa-comments fa-2x"></i>
+                            </div>
+                            <h5 class="fw-bold">Komunikasi</h5>
+                            <p class="text-muted small">Sangat komunikatif dan mampu menyampaikan solusi serta informasi teknis secara efektif dan mudah dipahami oleh klien maupun rekan tim lintas divisi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="karya" class="portfolio-section py-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-12 d-flex justify-content-between align-items-end">
+                    <div>
+                        <h2 class="fw-bold mb-2">Pengalaman & <span class="text-orange">Proyek</span></h2>
+                        <p class="text-muted mb-0">Rangkuman rekam jejak yang relevan dengan posisi pengajar pemrograman.</p>
+                    </div>
+                    <!-- Kategori Filter -->
+                    <div class="btn-group d-none d-md-flex" role="group">
+                        <button type="button" class="btn btn-outline-dark filter-btn active" data-filter="all">Semua</button>
+                        <button type="button" class="btn btn-outline-dark filter-btn" data-filter="web">Web & Coding</button>
+                        <button type="button" class="btn btn-outline-dark filter-btn" data-filter="prof">Profesional</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4" id="portfolio-grid">
+                
+                <!-- Project 1: Website Pariwisata -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                    <div class="card portfolio-card border-0 shadow-sm h-100">
+                        <div class="card-header bg-light p-4 text-center">
+                            <i class="fa-brands fa-html5 fa-3x text-dark mb-2 me-2"></i>
+                            <i class="fa-brands fa-css3-alt fa-3x text-orange mb-2"></i>
+                            <h5 class="text-dark mb-0">Projek Web Developer</h5>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-dark mb-2 align-self-start">Terbaru</span>
+                            <h5 class="fw-bold">Pengembangan Web Pariwisata Tasikmalaya</h5>
+                            <p class="text-muted small mb-3 flex-grow-1">Merancang website informatif mengenai sejarah, wisata, dan kuliner khas. Menata tata letak visual agar rapi, terstruktur, dan menarik bagi pengunjung.</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Membuktikan pemahaman Frontend</li>
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Implementasi UI/UX yang Responsif</li>
+                            </ul>
+                            <a href="https://jundan01.github.io/KotaKelahiran/" target="_blank" class="btn btn-sm btn-outline-dark w-100"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i>Kunjungi Website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Animasi Metaverse -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="prof">
+                    <div class="card portfolio-card border-0 shadow-sm h-100">
+                        <div class="card-header bg-dark text-white p-4 text-center">
+                            <i class="fa-solid fa-users fa-3x text-orange mb-2"></i>
+                            <h5 class="mb-0">Leader Team</h5>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-orange mb-2 align-self-start">Apr - Mei 2023</span>
+                            <h5 class="fw-bold">Projek Desain Animasi Metaverse</h5>
+                            <p class="text-muted small mb-3 flex-grow-1">Memimpin tim dalam menyelesaikan proyek desain di bawah tekanan tenggat waktu. Bertanggung jawab dalam pembagian tugas dan penyelesaian masalah (*problem solving*).</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Komunikasi Tim Efektif</li>
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Kepemimpinan & Koordinasi</li>
+                            </ul>
+                            <a href="https://youtu.be/xOeoW4akzv8?si=RKp7-jCdJ3Yqvqyx" target="_blank" class="btn btn-sm btn-outline-dark w-100"><i class="fa-brands fa-youtube text-danger me-2"></i>Tonton Video Bukti</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: PKL CV Sukapura -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="prof">
+                    <div class="card portfolio-card border-0 shadow-sm h-100">
+                        <div class="card-header bg-light p-4 text-center">
+                            <i class="fa-solid fa-building fa-3x text-dark mb-2"></i>
+                            <h5 class="text-dark mb-0">Desain Interior & Drafter</h5>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-dark mb-2 align-self-start">Feb - Mei 2022 (PKL)</span>
+                            <h5 class="fw-bold">CV. Sukapura Karya Utama</h5>
+                            <p class="text-muted small mb-3 flex-grow-1">Menyelesaikan tugas desain sesuai dengan target dan *request* klien. Melatih kedisiplinan kerja, ketelitian (*finishing*), dan koordinasi profesional.</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Kedisiplinan Profesional</li>
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Orientasi Detail (AutoCad, Sketchup)</li>
+                            </ul>
+                            <a href="https://drive.google.com/file/d/107U4Wb7i2WShSINJrPy31Dj4VBAV8Wot/view?usp=drive_link" target="_blank" class="btn btn-sm btn-outline-dark w-100"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i>Lihat Bukti Desain</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Struktur Data -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                    <div class="card portfolio-card border-0 shadow-sm h-100">
+                        <div class="card-header bg-dark text-white p-4 text-center">
+                            <i class="fa-brands fa-python fa-3x text-orange mb-2"></i>
+                            <h5 class="mb-0">Struktur Data & Algoritma</h5>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-orange mb-2 align-self-start">Terbaru</span>
+                            <h5 class="fw-bold">Kumpulan Kode Python</h5>
+                            <p class="text-muted small mb-3 flex-grow-1">Penerapan konsep algoritma esensial (Sorting, Stack, Queue) dengan Python, mencerminkan pemahaman logika yang tangguh untuk membangun struktur sistem yang efisien.</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Problem Solving Logis</li>
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Penguasaan Sintaks Algoritmik</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#modalStrukturData"><i class="fa-solid fa-eye me-2"></i>Lihat Bukti Kode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Data Analytic -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                    <div class="card portfolio-card border-0 shadow-sm h-100">
+                        <div class="card-header bg-light p-4 text-center">
+                            <i class="fa-brands fa-r-project fa-3x text-dark mb-2"></i>
+                            <h5 class="text-dark mb-0">Projek Akhir R</h5>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-dark mb-2 align-self-start">Terbaru</span>
+                            <h5 class="fw-bold">Analisis Data Komprehensif</h5>
+                            <p class="text-muted small mb-3 flex-grow-1">Pemrosesan dataset iklim berskala besar menggunakan *Multiple Linear Regression* sebagai portofolio pendukung analisis teknis tingkat menengah.</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Ketelitian Data</li>
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Logika Matematika</li>
+                            </ul>
+                            <a href="https://drive.google.com/file/d/1Gph05vg4xASqiahXoC8CzzaDVHuZAMNv/view?usp=drive_link" target="_blank" class="btn btn-sm btn-outline-dark w-100"><i class="fa-solid fa-arrow-up-right-from-square me-2"></i>Lihat Laporan Akhir</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: PHP Native -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                    <div class="card portfolio-card border-0 shadow-sm h-100">
+                        <div class="card-header bg-primary text-white p-4 text-center">
+                            <i class="fa-brands fa-php fa-3x text-white mb-2"></i>
+                            <h5 class="mb-0">PHP Native</h5>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-primary mb-2 align-self-start">Terbaru</span>
+                            <h5 class="fw-bold">ATK Pro - Sistem ERP</h5>
+                            <p class="text-muted small mb-3 flex-grow-1">Pengembangan Sistem Informasi Terintegrasi untuk toko alat tulis kantor menggunakan PHP Native, lengkap dengan autentikasi dan manajemen database.</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Manajemen Database Relasional</li>
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Keamanan Login Berbasis Sesi</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#modalPHPNative"><i class="fa-solid fa-eye me-2"></i>Lihat Bukti Kode</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Java -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="prof">
+                    <div class="card portfolio-card border-0 shadow-sm h-100">
+                        <div class="card-header bg-danger text-white p-4 text-center">
+                            <i class="fa-brands fa-java fa-3x text-white mb-2"></i>
+                            <h5 class="mb-0">Pemrograman Java</h5>
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-danger mb-2 align-self-start">OOP Terapan</span>
+                            <h5 class="fw-bold">Aplikasi Console Java</h5>
+                            <p class="text-muted small mb-3 flex-grow-1">Pembuatan program berbasis Object-Oriented Programming (OOP) menggunakan IDE Eclipse untuk manajemen sistem informasi studi (Study Tool).</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Paradigma Berbasis Objek</li>
+                                <li><i class="fa-solid fa-check text-orange me-2"></i> Enkapsulasi & Pewarisan</li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#modalJava"><i class="fa-solid fa-eye me-2"></i>Lihat Bukti Kode</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="kontak" class="footer py-5 bg-dark text-white">
+        <div class="container text-center py-4">
+            <h3 class="fw-bold mb-4">Mari Berkolaborasi!</h3>
+            <p class="text-muted mb-4">Siap bergabung menjadi <strong>Junior Programmer</strong>. Saya bersemangat untuk terus berkembang, belajar hal baru, dan menciptakan solusi digital yang inovatif.</p>
+            <div class="d-flex justify-content-center gap-3 mb-5">
+                <a href="https://www.linkedin.com/in/ajria-jundan/" target="_blank" class="btn btn-outline-light rounded-circle social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/ajriajundan_/" target="_blank" class="btn btn-outline-light rounded-circle social-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/6283174192722" target="_blank" class="btn btn-outline-light rounded-circle social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <hr class="border-secondary mb-4">
+            <p class="small text-muted mb-0">&copy; 2026 Ajria Jundan - Junior Programmer. Desain Minimalis & Modern.</p>
+        </div>
+    </footer>
+
+    <!-- MODALS SECTION -->
+
+    <!-- Modal Struktur Data (Python) -->
+    <div class="modal fade" id="modalStrukturData" tabindex="-1" aria-labelledby="modalStrukturDataLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white border-0">
+                    <h5 class="modal-title" id="modalStrukturDataLabel"><i class="fa-brands fa-python text-orange me-2"></i> Kumpulan Bukti Keahlian Python</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 bg-dark" style="max-height: 500px; overflow-y: auto;">
+                    <div class="accordion accordion-flush" id="accordionPython">
+                        <!-- Item 1 -->
+                        <div class="accordion-item bg-dark border-secondary">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <i class="fa-solid fa-code text-orange me-2"></i> Pertemuan 1-2: Fibonacci & Dasar Algoritma
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionPython">
+                                <div class="accordion-body p-0 border-top border-secondary">
+                                    <div class="p-3 bg-secondary bg-opacity-25 text-light small">
+                                        Mendemonstrasikan pemahaman mengenai struktur perulangan (looping), kondisi (if-else), dan fungsi rekursif untuk memecahkan masalah matematis (Deret Fibonacci).
+                                    </div>
+<pre class="m-0"><code class="language-python"># 1. Fibonacci Rekursif
+count = 2 
+def fibonaci(prev1, prev2):
+    global count
+    if count <= 19:
+        newfibo = prev1 + prev2
+        print(newfibo)
+        prev2 = prev1
+        prev1 = newfibo
+        count += 1
+        fibonaci(prev1, prev2)
+    else:
+        return
+
+print(0)
+print(1)
+fibonaci(1,0)
+
+# 2. Mencari Nilai Minimum pada Array
+my_array = [7, 12, 9, 4, 11]
+minVal = my_array[0]
+
+for i in my_array:
+    if i < minVal:
+        minVal = i
+print('Lowest value:', minVal)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="accordion-item bg-dark border-secondary">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fa-solid fa-arrow-down-short-wide text-orange me-2"></i> Pertemuan 3: Bubble & Selection Sort
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPython">
+                                <div class="accordion-body p-0 border-top border-secondary">
+                                    <div class="p-3 bg-secondary bg-opacity-25 text-light small">
+                                        Menunjukkan kemampuan dalam memanipulasi array dengan teknik swapping pada algoritma pengurutan primitif (O(n^2)).
+                                    </div>
+<pre class="m-0"><code class="language-python"># Bubble Sort
+my_array = [7, 3, 9, 12, 11]
+n = len(my_array)
+for i in range(n-1):
+    swapped = False
+    for j in range(n-i-1):
+        if my_array[j] > my_array[j+1]:
+            my_array[j], my_array[j+1] = my_array[j+1], my_array[j]
+            swapped = True
+    if not swapped:
+        break 
+print("Bubble Sort array:", my_array)
+
+# Selection Sort (Optimized)
+my_array2 = [64, 34, 25, 5, 22, 11, 90, 12]
+n = len(my_array2)
+for i in range(n-1):
+    min_index = i 
+    for j in range(i+1, n):
+        if my_array2[j] < my_array2[min_index]:
+            min_index = j
+    my_array2[i], my_array2[min_index] = my_array2[min_index], my_array2[i]
+print("Selection Sort array:", my_array2)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="accordion-item bg-dark border-secondary">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fa-solid fa-layer-group text-orange me-2"></i> Pertemuan 4: Merge Sort (Divide & Conquer)
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPython">
+                                <div class="accordion-body p-0 border-top border-secondary">
+                                    <div class="p-3 bg-secondary bg-opacity-25 text-light small">
+                                        Implementasi algoritma Divide and Conquer tingkat lanjut (O(n log n)) menggunakan konsep rekursi.
+                                    </div>
+<pre class="m-0"><code class="language-python"># Merge Sort Array (Ascending)
+def mergeSort(arr):
+    if len(arr) <= 1:
+        return arr
+    
+    mid = len(arr) // 2
+    L = arr[:mid]
+    R = arr[mid:]
+
+    sortedleft = mergeSort(L)
+    sortedright = mergeSort(R)
+   
+    return merge(sortedleft, sortedright)
+
+def merge(left, right):
+    result = []
+    i, j = 0, 0
+    
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result.extend(left[i:])
+    result.extend(right[j:])
+    
+    return result
+
+unsortedArr = [3, 7, 6, -10, 23.5, 55, -13]
+sortedArr = mergeSort(unsortedArr)
+print("Sorted Array:", sortedArr)</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="accordion-item bg-dark border-0">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fa-solid fa-server text-orange me-2"></i> Pertemuan 7: Stack & Queue (Linked List)
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionPython">
+                                <div class="accordion-body p-0 border-top border-secondary">
+                                    <div class="p-3 bg-secondary bg-opacity-25 text-light small">
+                                        Membuktikan kompetensi OOP (Object-Oriented Programming) dengan mendefinisikan kelas struktur data dinamis menggunakan Linked List.
+                                    </div>
+<pre class="m-0"><code class="language-python"># Node Class untuk Linked List
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Queue dengan Linked List (FIFO)
+class Queue:
+    def __init__(self):
+        self.front = None
+        self.rear = None
+        self.size = 0
+
+    def enqueue(self, item):
+        new_node = Node(item)
+        if self.isEmpty():
+            self.front = self.rear = new_node
+        else:
+            self.rear.next = new_node
+            self.rear = new_node
+        self.size += 1
+
+    def dequeue(self):
+        if not self.isEmpty():
+            dequeued_item = self.front.data
+            self.front = self.front.next
+            self.size -= 1
+            if self.front is None:
+                self.rear = None
+            return dequeued_item
+        return None
+
+    def isEmpty(self):
+        return self.front is None
+
+q = Queue()
+q.enqueue(1)
+q.enqueue(2)
+print("Dequeue:", q.dequeue()) # Output: 1</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <p class="text-muted small w-100 text-start m-0">Keseluruhan kode ditarik langsung dari file tugas .ipynb, membuktikan penguasaan algoritma dasar hingga menengah.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal PHP Native -->
+    <div class="modal fade" id="modalPHPNative" tabindex="-1" aria-labelledby="modalPHPNativeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary text-white border-0">
+                    <h5 class="modal-title" id="modalPHPNativeLabel"><i class="fa-brands fa-php text-white me-2"></i> ATK Pro - login.php</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 bg-dark" style="max-height: 400px; overflow-y: auto;">
+<pre><code class="language-php">&lt;?php
+require_once 'config/database.php';
+startSecureSession();
+
+// Redirect if already logged in
+if (isLoggedIn()) {
+    header("Location: admin/index.php");
+    exit;
+}
+
+$error = '';
+if (isset($_SESSION['login_error'])) {
+    $error = $_SESSION['login_error'];
+    unset($_SESSION['login_error']);
+}
+?&gt;
+&lt;!-- Implementasi form handling dan alert di bagian HTML --&gt;
+&lt;?php if ($error): ?&gt;
+&lt;div class="alert-custom alert-danger-custom"&gt;
+    &lt;i class="bi bi-exclamation-circle"&gt;&lt;/i&gt; &lt;?= sanitize($error) ?&gt;
+&lt;/div&gt;
+&lt;?php endif; ?&gt;</code></pre>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <p class="text-muted small w-100 text-start m-0">Diambil dari direktori <strong>project_psid_2</strong>, memperlihatkan pengelolaan sesi yang aman (Secure Session) dan implementasi logika PHP.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Java -->
+    <div class="modal fade" id="modalJava" tabindex="-1" aria-labelledby="modalJavaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-danger text-white border-0">
+                    <h5 class="modal-title" id="modalJavaLabel"><i class="fa-brands fa-java text-white me-2"></i> Implementasi OOP Java</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 bg-dark" style="max-height: 400px; overflow-y: auto;">
+                    <div class="p-2 bg-secondary bg-opacity-25 text-light small text-center">Cuplikan kelas Student.java (Eclipse - StudyTool)</div>
+<pre class="m-0 border-bottom border-secondary"><code class="language-java">package studyTool;
+
+public class Student {
+	private int studentId;
+	private String name;
+	private String ssn;
+	private double gpa;
+	public final int SCHCODE = 34958;
+	
+	public Student(int x, String n, String s, double g) {
+		studentId = x;
+		name = n;
+		ssn = s;
+		gpa = g;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+}</code></pre>
+                    <div class="p-2 bg-secondary bg-opacity-25 text-light small text-center">Cuplikan kelas StudentTester.java (Eclipse - StudyTool)</div>
+<pre class="m-0"><code class="language-java">package studyTool;
+
+public class StudentTester {
+	public static void main(String[] args) {
+		Student s1 = new Student(123, "Mary Smith", "999-99-999", 3.4);
+		System.out.println(s1);
+		
+		Student s2 = new Student();
+		s2.setStudentId(124);
+		s2.setName("Ajria Jundan");
+		s2.setSSN("31242311");
+		s2.setGPA(3.4);
+		
+		System.out.println(s2);
+	}
+}</code></pre>
+                </div>
+                <div class="modal-footer bg-light border-0">
+                    <p class="text-muted small w-100 text-start m-0">Menunjukkan penguasaan enkapsulasi, instansiasi objek class, constructor, dan paradigma OOP pada folder <strong>eclipse-workspace/StudyTool</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Prism.js Core & Languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup-templating.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
