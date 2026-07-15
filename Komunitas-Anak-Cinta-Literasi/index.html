@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANCIL - Komunitas Anak Negeri Cinta Literasi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hijauTua: '#1b4332',
+                        oranyeCeria: '#f77f00',
+                        cokelatKayu: '#7f5539',
+                        kuningMatahari: '#fcbf49'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-3">
+                    <!-- Placeholder Logo KANCIL -->
+                    <div class="w-10 h-10 bg-hijauTua rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">K</div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight text-hijauTua block leading-none">KANCIL</span>
+                        <span class="text-[10px] text-gray-500 tracking-wider uppercase">Anak Negeri Cinta Literasi</span>
+                    </div>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-600">
+                    <a href="#tentang" class="hover:text-hijauTua transition-colors">Tentang Kami</a>
+                    <a href="#program" class="hover:text-hijauTua transition-colors">Jalur Eksplorasi</a>
+                    <a href="#paspor" class="hover:text-hijauTua transition-colors">Paspor Jelajah</a>
+                    <a href="#kontak" class="hover:text-hijauTua transition-colors">Hubungi Kami</a>
+                    <a href="#jelajah" class="bg-oranyeCeria hover:bg-orange-600 text-white px-5 py-2.5 rounded-full shadow-md shadow-orange-500/20 transition-all transform hover:-translate-y-0.5">Mulai Menjelajah</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600 focus:outline-none p-2 rounded-lg hover:bg-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#tentang" class="block py-2 text-gray-600 hover:text-hijauTua font-medium">Tentang Kami</a>
+            <a href="#program" class="block py-2 text-gray-600 hover:text-hijauTua font-medium">Jalur Eksplorasi</a>
+            <a href="#paspor" class="block py-2 text-gray-600 hover:text-hijauTua font-medium">Paspor Jelajah</a>
+            <a href="#kontak" class="block py-2 text-gray-600 hover:text-hijauTua font-medium">Hubungi Kami</a>
+            <a href="#jelajah" class="block text-center bg-oranyeCeria text-white py-3 rounded-full font-medium shadow-md">Mulai Menjelajah</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-br from-hijauTua to-emerald-950 text-white overflow-hidden py-20 lg:py-32">
+        <!-- Aksentuasi Elemen Estetik Siluet Bukit & Matahari -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -bottom-10 -left-10 w-96 h-96 bg-kuningMatahari rounded-full blur-3xl"></div>
+            <div class="absolute top-20 right-10 w-80 h-80 bg-oranyeCeria rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span class="inline-block bg-emerald-800/50 text-kuningMatahari border border-emerald-700/50 text-xs px-4 py-1.5 rounded-full font-semibold uppercase tracking-wider">Komunitas Literasi Cirebon</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+                        Nawasena Literasi: <br class="hidden sm:block"><span class="text-kuningMatahari">Menaklukkan Puncak Knowledge</span>
+                    </h1>
+                    <p class="text-emerald-100 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        KANCIL hadir sebagai bahtera bagi generasi muda mengarungi luasnya samudera ilmu, berbekal kecerdikan, empati, dan wawasan seluas cakrawala.
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#jelajah" class="bg-oranyeCeria hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg shadow-orange-600/30 transition-all transform hover:-translate-y-1 text-center">Mulai Menjelajah</a>
+                        <a href="#tentang" class="border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-full font-semibold transition-all text-center">Pelajari Pedoman</a>
+                    </div>
+                </div>
+                <!-- Area Representasi Grafis / Ilustrasi sesuai Template Modern -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-emerald-800/30 border-2 border-emerald-500/20 rounded-3xl p-6 shadow-2xl backdrop-blur-sm flex items-center justify-center">
+                        <div class="absolute -top-4 -right-4 w-12 h-12 bg-oranyeCeria rounded-2xl rotate-12 flex items-center justify-center font-bold text-xl shadow-lg">📖</div>
+                        <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-kuningMatahari rounded-2xl -rotate-12 flex items-center justify-center font-bold text-xl shadow-lg">🏅</div>
+                        <!-- Mockup Gambar/Logo Utama -->
+                        <div class="w-full h-full bg-gradient-to-tr from-emerald-900 to-hijauTua rounded-2xl flex flex-col items-center justify-center p-6 text-center shadow-inner">
+                            <span class="text-6xl mb-4">🦊</span>
+                            <h3 class="font-bold text-lg text-kuningMatahari">Sang Penjelajah</h3>
+                            <p class="text-xs text-emerald-200 mt-2">"Membaca bersama KANCIL adalah sebuah petualangan seru untuk menaklukkan puncak-puncak ilmu pengetahuan."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI & MUQADDIMAH -->
+    <section id="tentang" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <span class="w-8 h-[2px] bg-oranyeCeria block"></span>
+                        <span class="text-xs font-bold text-oranyeCeria uppercase tracking-widest">Muqaddimah</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-hijauTua tracking-tight">Membangun Budaya Berpikir Kritis & Berkarakter Mulia</h2>
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        Di tengah arus zaman yang bergerak cepat, tantangan terbesar bagi generasi anak negeri bukan hanya pada akses informasi, tetapi pada kemampuan memahami, mengolah, dan memaknai ilmu tersebut. Literasi bukan sekadar kemampuan membaca dan menulis, melainkan fondasi berpikir kritis.
+                    </p>
+                    <blockquote class="border-l-4 border-kuningMatahari bg-amber-50/50 p-4 rounded-r-xl text-sm italic text-gray-700">
+                        "Seperti Kancil yang dikenal cerdik dan tangkas dalam cerita rakyat, komunitas ini diharapkan mampu melahirkan generasi yang cerdas dalam berpikir, bijak dalam bertindak, dan berani dalam menghadapi tantangan kehidupan."
+                    </blockquote>
+                </div>
+                <!-- Grid Informasi Komunitas -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                        <span class="text-2xl block mb-2">📍</span>
+                        <h4 class="font-bold text-hijauTua mb-1">Kedudukan</h4>
+                        <p class="text-xs text-gray-500">Berdiri kokoh di Cirebon sejak 10 April 2026 sebagai episentrum literasi inklusif.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                        <span class="text-2xl block mb-2">🤝</span>
+                        <h4 class="font-bold text-hijauTua mb-1">Asas Utama</h4>
+                        <p class="text-xs text-gray-500">Berlandaskan asas kekeluargaan, kecintaan pada ilmu, dan pengembangan karakter anak.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                        <span class="text-2xl block mb-2">👶</span>
+                        <h4 class="font-bold text-hijauTua mb-1">Anggota Muda</h4>
+                        <p class="text-xs text-gray-500">Anak-anak usia sekolah sebagai subjek utama yang didampingi secara aktif.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                        <span class="text-2xl block mb-2">🛡️</span>
+                        <h4 class="font-bold text-hijauTua mb-1">Pandu Literasi</h4>
+                        <p class="text-xs text-gray-500">Relawan berdedikasi tinggi selaku pendamping, pembimbing, dan teladan membaca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JALUR EKSPLORASI (PROGRAM UTAMA) -->
+    <section id="program" class="py-20 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold text-oranyeCeria uppercase tracking-widest">Rekomendasi Program</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-hijauTua tracking-tight">Tiga Jejak Penjelajah Ilmu</h2>
+                <p class="text-sm text-gray-500">Metode terukur KANCIL untuk mengasah ketangkasan intelektual sejak dini.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="w-12 h-12 bg-emerald-50 text-hijauTua font-semibold rounded-xl flex items-center justify-center mb-6 group-hover:bg-hijauTua group-hover:text-white transition-all text-xl shadow-inner">📚</div>
+                    <h3 class="text-xl font-bold text-hijauTua mb-3">Ekspedisi Buku</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-light">Aktivitas membaca bersama secara berkala untuk membangun budaya baca yang aktif, inklusif, dan menyenangkan bagi anak-anak.</p>
+                </div>
+                <!-- Program 2 -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="w-12 h-12 bg-amber-50 text-oranyeCeria font-semibold rounded-xl flex items-center justify-center mb-6 group-hover:bg-oranyeCeria group-hover:text-white transition-all text-xl shadow-inner">🏅</div>
+                    <h3 class="text-xl font-bold text-hijauTua mb-3">Mendaki Kata</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-light">Sistem penghargaan berbasis pencapaian literasi. Setiap target buku yang selesai akan mendapat apresiasi khusus berjenjang.</p>
+                </div>
+                <!-- Program 3 -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="w-12 h-12 bg-orange-50 text-cokelatKayu font-semibold rounded-xl flex items-center justify-center mb-6 group-hover:bg-cokelatKayu group-hover:text-white transition-all text-xl shadow-inner">🗣️</div>
+                    <h3 class="text-xl font-bold text-hijauTua mb-3">Lingkar Nalar</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-light">Forum diskusi kritis terarah untuk menumbuhkan wawasan luas serta membentuk kemampuan analisis masalah secara cerdik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PASPOR JELAJAH DIGITAL (GAMIFIKASI FLOW) -->
+    <section id="paspor" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold text-oranyeCeria uppercase tracking-widest">Sistem Validasi</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-hijauTua tracking-tight">Mekanisme Paspor Jelajah</h2>
+                <p class="text-sm text-gray-500">Langkah terstruktur menuju pencapaian predikat utama komunitas KANCIL.</p>
+            </div>
+
+            <!-- Block-based Horizontal/Vertical Timeline khas Wix Modern -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="relative bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="absolute -top-4 left-6 bg-hijauTua text-white w-8 ON h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">1</div>
+                    <h4 class="font-bold text-lg text-hijauTua mt-2 mb-2">Pilih Bahtera</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light">Anggota Muda memilih buku berkualitas melalui Katalog Perpustakaan Digital KANCIL.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="absolute -top-4 left-6 bg-hijauTua text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">2</div>
+                    <h4 class="font-bold text-lg text-hijauTua mt-2 mb-2">Arungi Makna</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light">Membaca secara seksama, kemudian merangkum intisari dan nilai moral ke dalam jurnal digital.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="absolute -top-4 left-6 bg-hijauTua text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">3</div>
+                    <h4 class="font-bold text-lg text-hijauTua mt-2 mb-2">Uji Kelayakan</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light">Melakukan sesi interaksi dan verifikasi ulasan secara objektif bersama Pandu Literasi.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                    <div class="absolute -top-4 left-6 bg-oranyeCeria text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">4</div>
+                    <h4 class="font-bold text-lg text-hijauTua mt-2 mb-2">Kancil Cendekia</h4>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light">Mendapatkan lencana digital resmi hingga terbit sertifikat apresiasi akhir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION: JEMBATAN RELASI -->
+    <section id="jelajah" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div class="bg-gradient-to-r from-oranyeCeria to-amber-600 rounded-3xl p-8 sm:p-12 lg:p-16 text-white text-center shadow-xl shadow-orange-600/20 relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-9xl opacity-10 pointer-events-none">🦊</div>
+            <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Mari Bersinergi Membangun Generasi Emas</h2>
+                <p class="text-sm sm:text-base text-orange-50 font-light leading-relaxed">
+                    Menanamkan kecintaan ilmu membutuhkan kolaborasi yang solid. Berkontribusilah nyata baik sebagai relawan pendamping (Pandu Literasi) maupun mitra penyedia fasilitas pendukung (Juru Bekal).
+                </p>
+                <div class="pt-4 flex flex-wrap gap-4 justify-center">
+                    <button class="bg-hijauTua hover:bg-emerald-950 text-white font-semibold px-8 py-3.5 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5">Gabung Jadi Pandu</button>
+                    <button class="bg-white hover:bg-gray-50 text-oranyeCeria font-semibold px-8 py-3.5 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5">Salurkan Donasi Buku</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontak" class="bg-hijauTua text-emerald-100 pt-16 pb-8 border-t border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3 text-white">
+                    <div class="w-8 h-8 bg-oranyeCeria rounded-full flex items-center justify-center font-bold text-md">K</div>
+                    <span class="text-lg font-bold tracking-tight">KANCIL</span>
+                </div>
+                <p class="text-xs text-emerald-200/70 font-light leading-relaxed">
+                    Wadah terpadu pembinaan adat literasi anak bangsa yang berbasis di Cirebon, Jawa Barat.
+                </p>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Navigasi</h5>
+                <ul class="space-y-2 text-xs text-emerald-200/80 font-light">
+                    <li><a href="#tentang" class="hover:text-white transition-colors">Tentang Kami</a></li>
+                    <li><a href="#program" class="hover:text-white transition-colors">Jalur Eksplorasi</a></li>
+                    <li><a href="#paspor" class="hover:text-white transition-colors">Paspor Jelajah</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Struktural Inti</h5>
+                <ul class="space-y-2 text-xs text-emerald-200/80 font-light">
+                    <li>Penasehat & Leader</li>
+                    <li>Sekretaris (Juru Tulis)</li>
+                    <li>Bendahara (Juru Bekal)</li>
+                    <li>Kominfo, Humas & Redaktur</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold text-sm tracking-wider uppercase mb-4">Sekretariat</h5>
+                <p class="text-xs text-emerald-200/80 font-light leading-relaxed">
+                    Komunitas Anak Negeri Cinta Literasi<br>
+                    Kota Cirebon, Jawa Barat<br>
+                    Indonesia
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-emerald-900/60 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-emerald-300/60">
+            <p>&copy; 2026 KANCIL. Ditetapkan Resmi Berlandaskan AD/ART Komunitas.</p>
+            <p class="italic">"Buku adalah bahtera, dan pikiranmu adalah samudera tak bertepi."</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT FOR MOBILE MENU -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menutup menu otomatis jika link diklik
+        const links = mobileMenu.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
